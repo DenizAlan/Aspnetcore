@@ -28,3 +28,4 @@ C:\Users\DENİZ\Desktop\ASPNETCORE\basics\obj\Debug\net7.0\refint\basics.dll
 C:\Users\DENİZ\Desktop\ASPNETCORE\basics\obj\Debug\net7.0\basics.pdb
 C:\Users\DENİZ\Desktop\ASPNETCORE\basics\obj\Debug\net7.0\basics.genruntimeconfig.cache
 C:\Users\DENİZ\Desktop\ASPNETCORE\basics\obj\Debug\net7.0\ref\basics.dll
+C:\Users\DENİZ\Desktop\ASPNETCORE\basics\obj\Debug\net7.0\basics.sourcelink.json
