@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\1aspnetcore.png",
+      "PackagePath": "staticwebassets\\img\\1aspnetcore.png"
+    },
+    {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\2c.png",
+      "PackagePath": "staticwebassets\\img\\2c.png"
+    },
+    {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\3javascript.jpg",
+      "PackagePath": "staticwebassets\\img\\3javascript.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\4yazilim.jpg",
+      "PackagePath": "staticwebassets\\img\\4yazilim.jpg"
+    },
+    {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
