@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\basics.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\css\\contact.css",
+      "PackagePath": "staticwebassets\\css\\contact.css"
+    },
+    {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\3javascript.jpg",
       "PackagePath": "staticwebassets\\img\\3javascript.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\4php.jpg",
+      "PackagePath": "staticwebassets\\img\\4php.jpg"
     },
     {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\4yazilim.jpg",

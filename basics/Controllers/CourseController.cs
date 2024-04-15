@@ -13,26 +13,23 @@ namespace basics.Controllers
     public class CourseController : Controller
     {
 
-        public IActionResult Index()
+
+          public IActionResult Details(int id)
         {
-            var kurs = new Course();
-            kurs.Id = 1;
-            kurs.Title = "Yazılım Kursları";
-            kurs.Description = " ";
-            kurs.image="4yazilim.jpg";
+
+            if(id==null){
+                // Redirect farklı url ye yönlendirir
+                return Redirect("/course/list");
+            }
+           var kurs=Repository.GetById(id);
+
             return View(kurs);
         }
 
         public IActionResult List()
         {
-            var kurslar = new List<Course>()
-            {
-                new Course() {Id = 1, Title = "asp net core", Description = "Güzel bir kurs", image="1aspnetcore.png" },
-                new Course() {Id = 2, Title = "c#", Description = "Güzel bir kurs", image="2c.png" },
-                new Course() {Id = 3, Title = "javascript", Description = "Güzel bir kurs", image="3javascript.jpg" }
-            };
-
-            return View("CourseList", kurslar);
+           
+            return View("CourseList", Repository.Courses);
         }
 
     }

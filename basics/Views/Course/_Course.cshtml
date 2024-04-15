@@ -8,7 +8,12 @@
       </div>
       <div class="col-8">
           <div class="card-body">
-            <h5 class="card-title">@Model.Title</h5>
+            <!-- <a href="/course/details/@Model.Id">
+              <h5 class="card-title">@Model.Title</h5>
+            </a>
+             -->
+              <!-- href yerini aşagıda asp'lerle oluşturma şekli -->
+             <a asp-controller="Course" asp-action="Details" asp-route-id="@Model.Id" class="card-link">@Model.Title</a>
             <p class="card-text">@Model.Description</p>
           </div>
       </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+LrcTC2bf9q6FTdAdGundYyaHOkitX+burf92rxd+oU=",
+  "Hash": "25/biQAX34chXpQj38ZPdZEd+iQz/ex065A2dyY5VtY=",
   "Source": "basics",
   "BasePath": "_content/basics",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\basics.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\css\\contact.css",
+      "SourceId": "basics",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\",
+      "BasePath": "_content/basics",
+      "RelativePath": "css/contact.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contact.css"
     },
     {
       "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\css\\site.css",
@@ -148,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\3javascript.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\4php.jpg",
+      "SourceId": "basics",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\",
+      "BasePath": "_content/basics",
+      "RelativePath": "img/4php.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\4php.jpg"
     },
     {
       "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\basics\\wwwroot\\img\\4yazilim.jpg",

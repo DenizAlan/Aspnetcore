@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!--css dosyaları buraya gelecek ama zorunlu degil-->
+    @RenderSection("Styles",false)
     <title>Document</title>
 </head>
 
 <body>
     <header>
         @await Html.PartialAsync("_Navbar")
+        <!--Header sectionun ismidir
+        default degeri true oldugu için false yazarsan istege baglı hale getirirsin -->
+        @RenderSection("Header" , false)
     </header>
     <div class="container mt-3">
         <main>
@@ -18,6 +23,7 @@
         </main>
     </div>
 
+    @RenderSection("Scripts",false)
 </body>
 
 </html>
