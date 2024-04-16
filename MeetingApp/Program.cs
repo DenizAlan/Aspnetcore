@@ -5,6 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
+//static dosyaları dışarı aç
+app.UseStaticFiles();
+app.UseRouting();
+
 //controller/action/id
 app.MapDefaultControllerRoute();
 
