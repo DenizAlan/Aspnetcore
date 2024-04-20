@@ -1,20 +1,29 @@
-            <!-- 1.yol -->
+<!-- 1.yol -->
 <!-- view den bir string bir parametre gelio
 <!-- model string -->
 <!-- <h1 class="h4">@Model</h1> -->
-
+@model MeetingInfo
 
 @{
-    ViewBag.Title="Toplantı Başvuru";
-    Layout="_Layout2";
+ViewBag.Title="Toplantı Başvuru";
+Layout="_Layout2";
 }
 
 
-            <!--2. Viewbaglı yol -->
+<!--2. Viewbaglı yol -->
 <!-- <h1 class="h4">@ViewBag.Selamlama , @ViewBag.UserName</h1> -->
 
+<main class="text-center">
+    <!-- 3.ViewDatalı yol -->
+    <h1 class="h4">@ViewData["Selamlama"] </h1>
+    <p>Toplantı katılım durumuzu bildiriniz</p>
+    <div class="card my-2">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model.Location</li>
+            <li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecek</li>
+            <li class="list-group-item">@Model.NumberOfPeople katılımcı</li>
+        </ul>
+    </div>
+    <a asp-controller="Meeting" asp-action="Apply" class="btn btn-sm btn-outline-primary">Başvuru Yap</a>
 
-            <!-- 3.ViewDatalı yol -->
-<h1 class="h4">@ViewData["Selamlama"] , @ViewData["UserName"]</h1>          
-<p>Toplantı katılım durumuzu bildiriniz</p>
-<a asp-controller="Meeting" asp-action="Apply" class="btn btn-sm btn-outline-primary">Başvuru Yap</a>
+</main>

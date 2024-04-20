@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MeetingApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -13,7 +14,7 @@ namespace MeetingApp.Controllers
              int saat=DateTime.Now.Hour;
                       //1.yol -->
             // var selamlama = saat > 12 ? "İyi Günler" : "Günaydın";
-            // //view klasörünün altında aramaması için model oldugunu belirtmelisin
+            // string bi bigi oldugundan view klasörünün altında aramaması için model oldugunu belirtmelisin
             // return View(model : selamlama);
 
             
@@ -24,8 +25,18 @@ namespace MeetingApp.Controllers
 
                     //3.ViewDatalı yol
             ViewData["Selamlama"]= saat > 12 ? "İyi Günler" : "Günaydın";
-            ViewData["UserName"]="Deniz";
-            return View();       
+             int UserCount=Repository.Users.Where(info=>info.WillAttend==true).Count();
+            //ViewData["UserName"]="Deniz";
+
+            var meetingInfo= new MeetingInfo() {
+                Id=1,
+                Location="İstanbul Abc Kongre Merkezi",
+                Date=new DateTime(2024,01,20,20,0,0),
+                NumberOfPeople=UserCount
+            };
+
+            //string bi bilgi olmadıgı için model tanımlaması yapmana gerek yok
+            return View(meetingInfo);       
         }
     }
 }
