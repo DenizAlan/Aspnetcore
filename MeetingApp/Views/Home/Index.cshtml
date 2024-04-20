@@ -1,7 +1,20 @@
+            <!-- 1.yol -->
+<!-- view den bir string bir parametre gelio
+<!-- model string -->
+<!-- <h1 class="h4">@Model</h1> -->
+
+
 @{
+    ViewBag.Title="Toplantı Başvuru";
     Layout="_Layout2";
 }
 
-<h1 class="h4">Merhaba</h1>
+
+            <!--2. Viewbaglı yol -->
+<!-- <h1 class="h4">@ViewBag.Selamlama , @ViewBag.UserName</h1> -->
+
+
+            <!-- 3.ViewDatalı yol -->
+<h1 class="h4">@ViewData["Selamlama"] , @ViewData["UserName"]</h1>          
 <p>Toplantı katılım durumuzu bildiriniz</p>
 <a asp-controller="Meeting" asp-action="Apply" class="btn btn-sm btn-outline-primary">Başvuru Yap</a>
