@@ -43,14 +43,29 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Create()
     {
-        ViewBag.Categories=Repository.Categories;
+        // ViewBag.Categories=Repository.Categories;
+        ViewBag.Categories=new SelectList(Repository.Categories, "CategoryId" , "Name" );
         return View();
     }
 
      [HttpPost]
     public IActionResult Create(Product model)
     {
-        return View();
+        //“ModelState”, bir modelin durumunu ve model bağlama doğrulamasını içeren bir özelliktir. Bir form gönderildiğinde, ModelState doğrulama hatalarını saklar ve bu hataları görünüme geri göndermek için kullanılabilir.
+        //Isvalid Bir modelin veya form alanının doğrulama kurallarını geçip geçmediğini belirtir.
+        if(ModelState.IsValid){
+            model.ProductId=Repository.Products.Count+1;
+            Repository.CreateProduct(model);
+            // return View();
+             //başka bir view e dönebilmek için redirectToAction
+            return RedirectToAction("Index");
+
+        }
+        ViewBag.Categories=new SelectList(Repository.Categories, "CategoryId" , "Name" );
+
+        return View(model);
+        
+
     }
 
     
