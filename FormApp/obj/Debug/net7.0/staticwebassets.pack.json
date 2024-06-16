@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\image\\cdfab06d-53fc-4f0b-9afd-24bb61b65335.jpg"
     },
     {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\FormApp\\wwwroot\\image\\e3bb0439-578d-44d3-9c8b-a005a31f0ecb.jpg",
+      "PackagePath": "staticwebassets\\image\\e3bb0439-578d-44d3-9c8b-a005a31f0ecb.jpg"
+    },
+    {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\FormApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

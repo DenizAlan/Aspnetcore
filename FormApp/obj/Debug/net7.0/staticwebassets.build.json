@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uogzryR24HKmEzhd7uW7bICBga2gEw+KAiHmpsSUd2I=",
+  "Hash": "7+AHFmWH2/P7658KjGuGZuJIO0SmkkZYYpNezODR7OM=",
   "Source": "FormApp",
   "BasePath": "_content/FormApp",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\cdfab06d-53fc-4f0b-9afd-24bb61b65335.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\FormApp\\wwwroot\\image\\e3bb0439-578d-44d3-9c8b-a005a31f0ecb.jpg",
+      "SourceId": "FormApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\FormApp\\wwwroot\\",
+      "BasePath": "_content/FormApp",
+      "RelativePath": "image/e3bb0439-578d-44d3-9c8b-a005a31f0ecb.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\e3bb0439-578d-44d3-9c8b-a005a31f0ecb.jpg"
     },
     {
       "Identity": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\FormApp\\wwwroot\\js\\site.js",
