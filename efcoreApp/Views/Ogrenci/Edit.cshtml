@@ -1,8 +1,9 @@
 @model Ogrenci
 
-<h2>Ögrenci Ekle</h2>
+<h2>Ögrenci Güncelleme</h2>
         <hr>
-<form asp-action="Create" asp-controller="Ogrenci" method="post">
+<form asp-action="Edit" asp-controller="Ogrenci" method="post">
+    <input type="hidden" asp-for="OgrenciId ">
     <div class="mb-3">
         <label asp-for="OgrenciAd" class="form-label">Ögrenci Adı</label>
         <input asp-for="OgrenciAd" class="form-control">
@@ -22,3 +23,6 @@
 
     <button type="submit" class="byn btn-secondary">Kaydet</button>
 </form>
+
+
+<!-- HTML'de "input hidden", kullanıcıya gösterilmeyen bir tür giriş elemanıdır. Kullanıcının görmesi veya değiştirmesi gerekmeyen ancak bir form ile gönderilmesi gereken verileri saklamak için kullanılır. Örneğin, bir kullanıcı kimliği veya belirli bir işlem kodu gibi, arka planda taşınması gereken ancak kullanıcı tarafından görülmemesi veya değiştirilmemesi gereken veriler için kullanılabilir. -->
