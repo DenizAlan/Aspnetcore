@@ -1,0 +1,58 @@
+@model IEnumerable<Ogrenci>
+
+        <!-- 1.Yol -->
+    <!-- <table class="table">
+        <thead>
+            <tr>
+                <th>Ogrenci Id</th>
+                <th>Ogrenci Ad</th>
+                <th>Ogrenci SoyAd</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var Ogrenci in Model)
+            {
+                <tr>
+                    <td>@Ogrenci.OgrenciId</td>
+                    <td>@Ogrenci.OgrenciAd</td>
+                    <td>@Ogrenci.OgrenciSoyad</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-primary">Details</a>
+                        <a href="" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table> -->
+
+
+        <!-- 2. Yapılması gereken yol -->
+        <h2>Ögrenci Listesi</h2>
+        <hr>
+        <a href="/Ogrenci/Create" class="btn btn-sm btn-primary mb-2">Ögrenci Ekle</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 150px;">@Html.DisplayNameFor(m=>m.OgrenciId)</th>
+                <th>@Html.DisplayNameFor(m=>m.OgrenciAd)</th>
+                <th>@Html.DisplayNameFor(m=>m.OgrenciSoyad)</th>
+                <th style="width: 150px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem=>item.OgrenciId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.OgrenciAd)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.OgrenciSoyad)</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-primary">Details</a>
+                        <a href="" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
