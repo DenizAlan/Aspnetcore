@@ -1,7 +1,8 @@
 @model IEnumerable<KursKayit>
 
-    <h2>Ögrenci Listesi</h2>
+    <h2>Kurs Kayıt Listesi</h2>
     <table class="table table-bordered">
+        <a asp-action="Create" class="btn btn-sm btn-primary">Kurs Kayıt Ekle</a>
         <thead>
             <tr>
                 <th style="width: 150px;">@Html.DisplayNameFor(m=>m.KayitId)</th>

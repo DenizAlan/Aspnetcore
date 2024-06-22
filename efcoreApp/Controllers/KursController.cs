@@ -43,7 +43,10 @@ namespace efcoreApp.Controllers
         public async Task<IActionResult> Edit(int? id )
         {
             if(id== null) return NotFound();
-            var kurs= await _context.Kurslar.FindAsync(id);
+            var kurs= await _context.Kurslar
+                                    .Include(k=>k.KursKayitlari)
+                                    .ThenInclude(k=>k.Ogrenci)
+                                    .FirstOrDefaultAsync(k=>k.KursId==id);
             if(kurs==null) return NotFound();
             return View(kurs);
            

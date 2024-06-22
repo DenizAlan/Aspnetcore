@@ -2,27 +2,42 @@
 
 <h2>Ögrenci Güncelleme</h2>
         <hr>
-<form asp-action="Edit" asp-controller="Ogrenci" method="post">
-    <input type="hidden" asp-for="OgrenciId ">
-    <div class="mb-3">
-        <label asp-for="OgrenciAd" class="form-label">Ögrenci Adı</label>
-        <input asp-for="OgrenciAd" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label asp-for="OgrenciSoyad" class="form-label">Ögrenci Soyadı</label>
-        <input asp-for="OgrenciSoyad" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label asp-for="Eposta" class="form-label">Eposta</label>
-        <input asp-for="Eposta" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label asp-for="Telefon" class="form-label">Telefon</label>
-        <input asp-for="Telefon" class="form-control">
-    </div>
 
-    <button type="submit" class="byn btn-secondary">Kaydet</button>
-</form>
+<div class="row">
+    <div class="col-8">
+        <form asp-action="Edit" asp-controller="Ogrenci" method="post">
+            <input type="hidden" asp-for="OgrenciId ">
+            <div class="mb-3">
+                <label asp-for="OgrenciAd" class="form-label">Ögrenci Adı</label>
+                <input asp-for="OgrenciAd" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="OgrenciSoyad" class="form-label">Ögrenci Soyadı</label>
+                <input asp-for="OgrenciSoyad" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Eposta" class="form-label">Eposta</label>
+                <input asp-for="Eposta" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Telefon" class="form-label">Telefon</label>
+                <input asp-for="Telefon" class="form-control">
+            </div>
+        
+            <button type="submit" class="byn btn-secondary">Kaydet</button>
+        </form>
+    </div>
+    <div class="col-4">
+        <h4>Ögrencinin katıldığı Kurslar</h4>
+        <hr>
+        <ul>
+            @foreach(var item in @Model.KursKayitlari){
+                <li>@item.Kurs.Baslik</li>
+            }
+        </ul>
+    </div>
+</div>
+
 
 
 <!-- HTML'de "input hidden", kullanıcıya gösterilmeyen bir tür giriş elemanıdır. Kullanıcının görmesi veya değiştirmesi gerekmeyen ancak bir form ile gönderilmesi gereken verileri saklamak için kullanılır. Örneğin, bir kullanıcı kimliği veya belirli bir işlem kodu gibi, arka planda taşınması gereken ancak kullanıcı tarafından görülmemesi veya değiştirilmemesi gereken veriler için kullanılabilir. -->

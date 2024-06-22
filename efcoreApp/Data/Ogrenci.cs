@@ -25,6 +25,10 @@ namespace efcoreApp.Data
         public string? Eposta { get; set; }
         public string? Telefon { get; set; }
 
+        public ICollection<KursKayit> KursKayitlari {get;set;} =new List<KursKayit>{} ;
+
 
     }
 }
+
+        //ICollection<KursKayit>: KursKayit türündeki öğeleri içeren bir koleksiyonu temsil eder. ICollection,(bir liste tipi) koleksiyon işlemlerini destekleyen bir temel arabirimdir. Boyutunu almak, yeni öğeler eklemek gibi temel işlemleri içerir.
