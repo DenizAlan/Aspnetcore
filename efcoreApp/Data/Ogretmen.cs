@@ -12,7 +12,14 @@ namespace efcoreApp.Data
         public string? Ad { get; set; }
         public string? Soyad { get; set; }
         public string? Eposta { get; set; }
-        public string? Telefon { get; set; }
+        public string? Telefon { get; set; }      
+        public string AdSoyad
+        {
+            get
+            {
+                return this.Ad+" "+this.Soyad; 
+            }
+        }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}", ApplyFormatInEditMode =true)]
@@ -22,3 +29,5 @@ namespace efcoreApp.Data
 
     }
 }
+
+
