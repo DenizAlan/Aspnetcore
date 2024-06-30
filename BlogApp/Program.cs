@@ -1,7 +1,9 @@
+using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddDbContext<BlogContext>(options=>{
@@ -10,8 +12,16 @@ builder.Services.AddDbContext<BlogContext>(options=>{
     options.UseSqlServer(connectionString);
 });
 
+// sanal versiyonu verdiğimde gerçek versiyonu bana gönder demek
+builder.Services.AddScoped<IPostRepository , EfPostRepository>();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+//wwwroot altındaki dosyalar için
+app.UseStaticFiles();
+
+SeedData.TestVerileriniDoldur(app);
+
+app.MapDefaultControllerRoute();
 
 app.Run();

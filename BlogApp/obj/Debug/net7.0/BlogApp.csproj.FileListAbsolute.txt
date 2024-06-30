@@ -69,3 +69,7 @@ C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\Microsoft.EntityFram
 C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\obj\Debug\net7.0\BlogApp.RazorAssemblyInfo.cache
+C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\obj\Debug\net7.0\BlogApp.RazorAssemblyInfo.cs
+C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\libman.json
+C:\Users\DENİZ\Desktop\ASPNETCORE\BlogApp\bin\Debug\net7.0\BlogApp.staticwebassets.runtime.json
