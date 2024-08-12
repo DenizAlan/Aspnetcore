@@ -1,4 +1,5 @@
 using BlogApp.Data.Abstract;
+using BlogApp.Data.Concrete;
 using BlogApp.Data.Concrete.EfCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,8 @@ builder.Services.AddDbContext<BlogContext>(options=>{
 
 // sanal versiyonu verdiğimde gerçek versiyonu bana gönder demek
 builder.Services.AddScoped<IPostRepository , EfPostRepository>();
+builder.Services.AddScoped<ITagRepository , EfTagRepository>();
+
 
 var app = builder.Build();
 

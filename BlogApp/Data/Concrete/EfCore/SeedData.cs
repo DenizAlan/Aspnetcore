@@ -22,11 +22,11 @@ namespace BlogApp.Data.Concrete.EfCore
                 if(!context.Tags.Any())
                 {
                     context.Tags.AddRange(
-                        new Tag{Text="Web Programlama"},
-                        new Tag{Text="Backend"},
-                        new Tag{Text="Frontend"},
-                        new Tag{Text="Fullstack"},
-                        new Tag{Text="C#"}
+                        new Tag{Text="İç Mekan Bitkileri"},
+                        new Tag{Text="Dış Mekan bitkileri"},
+                        new Tag{Text="Orkide"},
+                        new Tag{Text="Çiçekli Bitkiler"},
+                        new Tag{Text="Çiçeksiz Bitkiler"}
                     );
                     context.SaveChanges();
                 }
@@ -43,27 +43,30 @@ namespace BlogApp.Data.Concrete.EfCore
                 if(!context.Posts.Any()){
                     context.Posts.AddRange(
                         new Post {
-                            Title="Asp.net core",
-                            Content="Asp.net core dersleri",
+                            Title="İç Mekan ",
+                            Content="İç Mekan Bitkileri",
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-10),
                             Tags=context.Tags.Take(3).ToList(),
+                            Image="icmekan.jpg",
                             UserId=1,
                         },
                           new Post {
-                            Title="C#",
-                            Content="C# dersleri",
+                            Title="Dış Mekan",
+                            Content="Dış Mekan bitkileri",
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-20),
                             Tags=context.Tags.Take(2).ToList(),
+                            Image="dismekan.jpg",
                             UserId=1,
                         },
                           new Post {
-                            Title="Javascript",
-                            Content="Javascript dersleri",
+                            Title="Orkide",
+                            Content="Orkide",
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-5),
                             Tags=context.Tags.Take(4).ToList(),
+                            Image="orkide.jpg",
                             UserId=2,
                         }
                     );
