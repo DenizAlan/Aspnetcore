@@ -24,11 +24,11 @@ namespace BlogApp.Data.Concrete.EfCore
                 if(!context.Tags.Any())
                 {
                     context.Tags.AddRange(
-                        new Tag{Text="İç Mekan Bitkileri" , Url="İç Mekan Bitkileri"},
-                        new Tag{Text="Dış Mekan bitkileri" , Url="Dış Mekan Bitkileri"},
-                        new Tag{Text="Orkide" , Url="Orkide"},
-                        new Tag{Text="Çiçekli Bitkiler" , Url="Çiçekli Bitkiler"},
-                        new Tag{Text="Çiçeksiz Bitkiler" , Url="Çiçeksiz Bitkiler"}
+                        new Tag{Text="İç Mekan Bitkileri" , Url="İç Mekan Bitkileri" , Color=TagColors.primary },
+                        new Tag{Text="Dış Mekan bitkileri" , Url="Dış Mekan Bitkileri" , Color=TagColors.danger},
+                        new Tag{Text="Orkide" , Url="Orkide", Color=TagColors.warning},
+                        new Tag{Text="Çiçekli Bitkiler" , Url="Çiçekli Bitkiler" , Color=TagColors.secondary},
+                        new Tag{Text="Çiçeksiz Bitkiler" , Url="Çiçeksiz Bitkiler" , Color=TagColors.success}
                     );
                     context.SaveChanges();
                 }
@@ -36,8 +36,8 @@ namespace BlogApp.Data.Concrete.EfCore
                 if(!context.Users.Any())
                 {
                     context.Users.AddRange(
-                        new User {UserName= "DenizAlan"},
-                        new User {UserName= "YaseminÖz"}
+                        new User {UserName= "DenizAlan" , Image="1.png"},
+                        new User {UserName= "YaseminÖz" , Image="2.png"}
                     );
                     context.SaveChanges();
                 }
@@ -53,6 +53,11 @@ namespace BlogApp.Data.Concrete.EfCore
                             Tags=context.Tags.Take(1).ToList(),
                             Image="icmekan.jpg",
                             UserId=1,
+                            Comments= new List<Comment>
+                                    {
+                                        new Comment { Text= "Çok güzeller" , PublishedOn=new DateTime(), UserId=1},
+                                        new Comment { Text= "Harika" , PublishedOn=new DateTime(), UserId=2}
+                                    }
                         },
                           new Post {
                             Title="Dış Mekan",
@@ -60,7 +65,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             Url="Dıs-mekan-bitkileri",
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-20),
-                            Tags=context.Tags.Take(1).ToList(),
+                            Tags=context.Tags.Take(2).ToList(),
                             Image="dismekan.jpg",
                             UserId=2,
                         },
@@ -70,7 +75,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             Url="orkide",
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-8),
-                            Tags=context.Tags.Take(1).ToList(),
+                            Tags=context.Tags.Take(3).ToList(),
                             Image="orkide.jpg",
                             UserId=1,                         
                         },
@@ -81,6 +86,16 @@ namespace BlogApp.Data.Concrete.EfCore
                             IsActive=true,
                             PublishedOn=DateTime.Now.AddDays(-23),
                             Tags=context.Tags.Take(1).ToList(),
+                            Image="dismekan.jpg",
+                            UserId=2                       
+                         },
+                          new Post {
+                            Title="Çiçeksiz bitkiler",
+                            Content="Çiçeksiz bitkiler",
+                            Url="ciceksiz-bitkiler",
+                            IsActive=true,
+                            PublishedOn=DateTime.Now.AddDays(-3),
+                            Tags=context.Tags.Take(5).ToList(),
                             Image="dismekan.jpg",
                             UserId=2                       
                          }

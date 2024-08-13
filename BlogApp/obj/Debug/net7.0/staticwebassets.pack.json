@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\BlogApp\\wwwroot\\img\\1.png",
+      "PackagePath": "staticwebassets\\img\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\BlogApp\\wwwroot\\img\\2.png",
+      "PackagePath": "staticwebassets\\img\\2.png"
+    },
+    {
       "Id": "C:\\Users\\DENİZ\\Desktop\\ASPNETCORE\\BlogApp\\wwwroot\\img\\dismekan.jpg",
       "PackagePath": "staticwebassets\\img\\dismekan.jpg"
     },
