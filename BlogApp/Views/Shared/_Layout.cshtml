@@ -14,6 +14,28 @@
             <a href="/posts" class="navbar-brand">
                 <i class="bi bi-flower3"></i>BlogApp
             </a>
+
+            <ul class="navbar-nav ms-auto">
+                
+                        @if(User.Identity!.IsAuthenticated)
+                        {
+                            <li class="nav-ittem">
+                                <a href="#" class="nav-link">@User.Identity.Name</a>
+                            </li>
+                            <li class="nav-ittem">
+                                <a href="/users/logout" class="nav-link">Logout</a>
+                            </li>
+                            
+                        }else
+                        {
+                            <li class="nav-ittem">
+                                <a href="/users/login" class="nav-link">Login</a>
+                            </li>
+                            <li class="nav-ittem">
+                                <a href="/users/register" class="nav-link">Register</a>
+                            </li>
+                        }
+            </ul>
         </div>
     </nav>
     <div class="container mt-3">
@@ -24,3 +46,6 @@
     @RenderSection("Scripts" , required:false)
 </body>
 </html>
+
+
+<!--User.Identity.IsAuthenticated ifadesi, kullanıcının kimlik doğrulamasının yapıldığı durumu belirtir. Yani, kullanıcı oturum açmışsa (kimlik doğrulaması başarılı olmuşsa), bu özellik true değerini döndürür. Aksi takdirde, yani kullanıcı oturum açmamışsa, false değerini döndürür.-->

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
@@ -8,6 +9,7 @@ using BlogApp.Entity;
 using BlogApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace BlogApp.Controllers
 {
@@ -24,6 +26,7 @@ namespace BlogApp.Controllers
         }
         public async Task<IActionResult> Index(string tag)
         {
+            var claims=User.Claims;
             //tolist eklemediğimiz için veri tabanına gitmedi ders:100 
             var posts = _postRepository.Posts;
             
@@ -53,22 +56,25 @@ namespace BlogApp.Controllers
         }
 
         [HttpPost]
-        public JsonResult AddComment(int PostId ,string UserName , string Text )
+        public JsonResult AddComment(int PostId , string Text )
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var username= User.FindFirstValue(ClaimTypes.Name);
+            var avatar=User.FindFirstValue(ClaimTypes.UserData);
             var entity = new Comment {
+                PostId=PostId,
                 Text=Text,
                 PublishedOn=DateTime.Now,
-                PostId=PostId,
-                User= new User {UserName=UserName , Image="2.png"}
+                UserId=int.Parse(userId ?? "")
             };
            
             _commentRepository.CreateComment(entity);
             
            return Json(new {
-            UserName,
+            username,
             Text,
             entity.PublishedOn,
-            entity.User.Image
+            avatar
            });
            
 
