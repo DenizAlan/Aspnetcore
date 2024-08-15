@@ -47,6 +47,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     context.Posts.AddRange(
                         new Post {
                             Title="İç Mekan ",
+                            Description="İç Mekan",
                             Content="İç Mekan Bitkileri",
                             Url="iç-mekan-bitkileri",
                             IsActive=true,
@@ -62,6 +63,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                           new Post {
                             Title="Dış Mekan",
+                            Description="Dış Mekan",
                             Content="Dış Mekan bitkileri",
                             Url="Dıs-mekan-bitkileri",
                             IsActive=true,
@@ -72,6 +74,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                          new Post {
                             Title="Orkide",
+                            Description="Orkide",
                             Content="Orkide",
                             Url="orkide",
                             IsActive=true,
@@ -82,6 +85,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                         new Post {
                             Title="Çiçekli bitkiler",
+                            Description="Çiçekli bitkiler",
                             Content="Çiçekli bitkiler",
                             Url="cicekli-bitkiler",
                             IsActive=true,
@@ -92,6 +96,7 @@ namespace BlogApp.Data.Concrete.EfCore
                          },
                           new Post {
                             Title="Çiçeksiz bitkiler",
+                            Description="Çiçeksiz bitkiler",
                             Content="Çiçeksiz bitkiler",
                             Url="ciceksiz-bitkiler",
                             IsActive=true,

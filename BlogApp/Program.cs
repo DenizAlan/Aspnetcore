@@ -24,7 +24,10 @@ builder.Services.AddScoped<IUserRepository , EfUserRepository>();
 
 
 //Authentication-Cookie öz. uygulamaya tanıtma
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+//giriş yapmadan yorum sayfasına gidemez , login sayfası açılır
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options=>{
+    options.LoginPath="/Users/Login";
+});
 
 
 var app = builder.Build();
@@ -51,6 +54,12 @@ app.MapControllerRoute(
     name:"posts_by_tag",
     pattern:"posts/tag/{tag}",
     defaults: new {Controller="Posts", action="Index"} 
+);
+
+app.MapControllerRoute(
+    name: "user_profile",
+    pattern:"profile/{username}",
+    defaults: new {Controller="Users" , Action="Profile"}
 );
 
 app.MapControllerRoute(
