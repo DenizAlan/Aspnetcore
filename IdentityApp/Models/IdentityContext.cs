@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdentityApp.Models
-{
-    public class IdentityContext : IdentityDbContext<IdentityUser>
+{                                                             //ders 126 string ID tipini belirtir
+    public class IdentityContext : IdentityDbContext<AppUser , AppRole , string>
     {
         public IdentityContext(DbContextOptions<IdentityContext> options):base(options)
         {

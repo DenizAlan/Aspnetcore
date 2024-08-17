@@ -10,7 +10,19 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<IdentityContext>(Options=> Options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnectionString"]));
 
-builder.Services.AddIdentity<IdentityUser , IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddIdentity<AppUser , AppRole>().AddEntityFrameworkStores<IdentityContext>();
+
+//Parola-User ayarlarını değiştirmek 
+builder.Services.Configure<IdentityOptions>(Options=> {
+    Options.Password.RequiredLength=6;
+    Options.Password.RequireNonAlphanumeric=false;
+    Options.Password.RequireUppercase=false;
+    Options.Password.RequireLowercase=false;
+    Options.Password.RequireDigit=false;
+
+    //Email tek olsun
+    Options.User.RequireUniqueEmail=true;
+});
 
 var app = builder.Build();
 
